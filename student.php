@@ -71,7 +71,7 @@
 
     ?>
     <div class="container mt-5 mb-5">
-	<div style="color: teal;" class="display-1">List of Students</div>
+	
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
             Name: <input style="border-radius: 20px" type="text" name="name">
             <span class="error">* <?php echo $nameErr; ?></span>
@@ -91,6 +91,7 @@
     if (mysqli_num_rows($result) != 0) {
     ?>
         <div class="container mt-5">
+		<div style="color: teal;text-align:center;" class="display-2">List of Students</div><br><br>
             <table class="table table-striped table-dark">
                 <tr>
                     <th>Roll No.</th>
