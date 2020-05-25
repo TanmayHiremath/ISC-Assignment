@@ -1,0 +1,28 @@
+
+
+
+<div class="container">
+    <div style="color: teal;" class="display-1">List of Students</div>
+    <br><br><br>
+      <mat-form-field style="color: white;">
+        <mat-label >Search</mat-label>
+        <input style="color: white;" matInput (keyup)="applyFilter($event)" placeholder="Search using Name or Roll No">
+      </mat-form-field>
+      <table  mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="name">
+          <th style="background-color: darkgreen;" mat-header-cell *matHeaderCellDef> Name</th>
+          <td style="background-color: orange" mat-cell *matCellDef="let student"> {{student.name}} </td>
+        </ng-container>
+        <ng-container matColumnDef="roll">
+          <th style="background-color: darkgreen;" mat-header-cell *matHeaderCellDef> Roll No.</th>
+          <td style="background-color: orange;" mat-cell *matCellDef="let student"> {{student.roll}} </td>
+        </ng-container>
+
+
+        <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+        <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
+
+      </table>
+      <mat-paginator style="background-color: lightseagreen;" [pageSizeOptions]="[5, 10,20]"></mat-paginator>
+    </div>
+  

@@ -1,0 +1,14 @@
+.mat-form-field {
+    font-size: 14px;
+    width: 80%;
+}
+.container {
+    margin-top: 100px;
+}
+table {
+    width: 80%;
+}
+
+mat-paginator {
+    width: 80%;
+}
