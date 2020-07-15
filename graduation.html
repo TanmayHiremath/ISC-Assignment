@@ -9,1241 +9,1364 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <style>
+    #scrollBtn {
+      display: none;
+      position: fixed;
+      bottom: 4vh;
+      right: 2vw;
+      z-index: 150;
+      width: 50px;
+      height: 50px;
+      border: none;
+      outline: none;
+      background-color: red;
+      cursor: pointer;
+      border-radius: 50%;
+      font-size: 3rem;
+    }
+
+    #scrollBtn:hover {
+      background-color: black;
+      color: white;
+    }
+    .mobile-navigation {
+      display: none;
+    }
+    .card {
+      cursor: pointer;
+    }
+
+    @media screen and (max-width:992px) {
+      .mobile-navigation {
+        display: block;
+      }
+    }
+  </style>
 </head>
 
 <body>
-<div class="container" id="aquatics">
-  <h1 class="text-center">aquatics</h1>
+  <button id="scrollBtn" title="Go to top">&#8963;</button>
+<div class="mobile-navigation">
+  <div class="d-flex justify-content-center">
+    <a class="small p-2" href="#aquatics">Aquatics</a>
+    <a class="small p-2" href="#athletics">Athletics</a>
+    <a class="small p-2" href="#badminton">Badminton</a>
+    <a class="small p-2" href="#basketball">Basketball</a></div>
+<div class="d-flex justify-content-center">
+  <a class="small p-2" href="#board-games">Board Games</a>
+  <a class="small p-2" href="#cricket">Cricket</a>
+  <a class="small p-2" href="#hockey">Hockey</a>
+  <a class="small p-2" href="#football">Football</a></div>
+  <div class="d-flex justify-content-center">
+    <a class="small p-2" href="#kho-kho">Kho Kho</a>
+    <a class="small p-2" href="#lawn-tennis">Lawn Tennis</a>
+    <a class="small p-2" href="#squash">Squash</a>
+    <a class="small p-2" href="#table-tennis">Table Tennis</a></div>
+  <div class="d-flex justify-content-center">
+    <a class="p-2" href="#"></a>
+  <a class="small p-2" href="#volleyball">Volleyball</a>
+  <a class="small p-2" href="#weightlifting">Weightlifting</a>
+  <a class="p-2" href="#" class="ml-auto"></a></div></div>
 
-  
-    <div class="card" style="width: 20vw;">
-      <img class="card-img-top" src="aquatics.png" alt="Card image" style="width:15vw">
-      <div class="card-body">
-        <h4 class="card-title">John Doe</h4>
-        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-        <a data-toggle="modal" data-target="#aquaticsModal" class="btn btn-primary stretched-link">See Profile</a>
+
+
+  <div class="container" id="aquatics">
+    <h1 class="text-center mt-5 mb-1 text-capitalize">aquatics</h1>
+
+    <div class="card-deck">
+      <div class="card">
+        <img class="card-img-top" src="aquatics.png" alt="Card image" style="width:15vw">
+        <div class="card-body">
+          <h4 class="card-title">John Doe</h4>
+          <p data-toggle="modal" data-target="#aquaticsModal" class="card-text stretched-link">Some example text some
+            example text. John Doe is an architect and engineer</p>
+        </div>
       </div>
     </div>
 
-  
-  <div class="modal fade" id="aquaticsModal">
-    <div class="modal-dialog  modal-xl modal-dialog-scrollable">
-      <div class="modal-content">
 
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h1 class="modal-title mx-auto">aquatics</h1>
-          <button type="button" class="close" data-dismiss="modal">×</button>
-        </div>
+    <div class="modal fade" id="aquaticsModal">
+      <div class="modal-dialog  modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
 
-        <!-- Modal body -->
-        <div class="modal-body">
-          <div class="container">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h1 class="modal-title mx-auto">aquatics</h1>
+            <button type="button" class="close" data-dismiss="modal">×</button>
+          </div>
 
-            <p>Some QnA on aquatics</p>
-            <div id="aquaticsAccordion">
-              <div class="card">
-                <div class="card-header">
-                  <a class="card-link" data-toggle="collapse" href="#aquaticsQ1">
-                    Question1
-                  </a>
-                </div>
-                <div id="aquaticsQ1" class="collapse show" data-parent="#aquaticsAccordion">
-                  <div class="card-body">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="container">
+
+              <p>Some QnA on aquatics</p>
+              <div id="aquaticsAccordion">
+                <div class="card">
+                  <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#aquaticsQ1">
+                      Question1
+                    </a>
+                  </div>
+                  <div id="aquaticsQ1" class="collapse show" data-parent="#aquaticsAccordion">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                      labore
+                      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                      aliquip ex ea commodo consequat.
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="card">
-                <div class="card-header">
-                  <a class="collapsed card-link" data-toggle="collapse" href="#aquaticsQ2">
-                    Question2
-                  </a>
-                </div>
-                <div id="aquaticsQ2" class="collapse" data-parent="#aquaticsAccordion">
-                  <div class="card-body">
-                    Fictum, deserunt mollit anim laborum astutumque! Quisque placerat facilisis egestas cillum dolore.
-                    Nec dubitamus multa iter quae et nos invenerat. Contra legem facit qui id facit quod lex prohibet.
-                    Quam diu etiam furor iste tuus nos eludet?
-                    Petierunt uti sibi concilium totius Galliae in diem certam indicere. Morbi fringilla convallis
-                    sapien, id pulvinar odio volutpat. A communi observantia non est recedendum.
-                    Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
-                    habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
-                    Praeterea iter est quasdam res quas ex communi.
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#aquaticsQ2">
+                      Question2
+                    </a>
+                  </div>
+                  <div id="aquaticsQ2" class="collapse" data-parent="#aquaticsAccordion">
+                    <div class="card-body">
+                      Fictum, deserunt mollit anim laborum astutumque! Quisque placerat facilisis egestas cillum dolore.
+                      Nec dubitamus multa iter quae et nos invenerat. Contra legem facit qui id facit quod lex prohibet.
+                      Quam diu etiam furor iste tuus nos eludet?
+                      Petierunt uti sibi concilium totius Galliae in diem certam indicere. Morbi fringilla convallis
+                      sapien, id pulvinar odio volutpat. A communi observantia non est recedendum.
+                      Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
+                      habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
+                      Praeterea iter est quasdam res quas ex communi.
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="card">
-                <div class="card-header">
-                  <a class="collapsed card-link" data-toggle="collapse" href="#aquaticsQ3">
-                    Question3
-                  </a>
-                </div>
-                <div id="aquaticsQ3" class="collapse" data-parent="#aquaticsAccordion">
-                  <div class="card-body">
-                    Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
-                    habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
-                    Praeterea iter est quasdam res quas ex communi.
-                    A communi observantia non est recedendum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus.
-                    Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae.
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#aquaticsQ3">
+                      Question3
+                    </a>
+                  </div>
+                  <div id="aquaticsQ3" class="collapse" data-parent="#aquaticsAccordion">
+                    <div class="card-body">
+                      Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
+                      habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
+                      Praeterea iter est quasdam res quas ex communi.
+                      A communi observantia non est recedendum. Vivamus sagittis lacus vel augue laoreet rutrum
+                      faucibus.
+                      Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae.
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="container" id="athletics">
-  <h1 class="text-center">Athletics</h1>
+  <div class="container" id="athletics">
+    <h1 class="text-center mt-5 mb-1 text-capitalize">athletics</h1>
 
-  
-    <div class="card" style="width: 20vw;">
-      <img class="card-img-top" src="athletics.png" alt="Card image" style="width:15vw">
-      <div class="card-body">
-        <h4 class="card-title">John Doe</h4>
-        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-        <a data-toggle="modal" data-target="#athleticsModal" class="btn btn-primary stretched-link">See Profile</a>
+    <div class="card-deck">
+      <div class="card">
+        <img class="card-img-top" src="athletics.png" alt="Card image" style="width:15vw">
+        <div class="card-body">
+          <h4 class="card-title">John Doe</h4>
+          <p data-toggle="modal" data-target="#athleticsModal" class="card-text stretched-link">Some example text some
+            example text. John Doe is an architect and engineer</p>
+        </div>
       </div>
     </div>
 
-  
-  <div class="modal fade" id="athleticsModal">
-    <div class="modal-dialog  modal-xl modal-dialog-scrollable">
-      <div class="modal-content">
 
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h1 class="modal-title mx-auto">Athletics</h1>
-          <button type="button" class="close" data-dismiss="modal">×</button>
-        </div>
+    <div class="modal fade" id="athleticsModal">
+      <div class="modal-dialog  modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
 
-        <!-- Modal body -->
-        <div class="modal-body">
-          <div class="container">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h1 class="modal-title mx-auto">athletics</h1>
+            <button type="button" class="close" data-dismiss="modal">×</button>
+          </div>
 
-            <p>Some QnA on Athletics</p>
-            <div id="athleticsAccordion">
-              <div class="card">
-                <div class="card-header">
-                  <a class="card-link" data-toggle="collapse" href="#athleticsQ1">
-                    Question1
-                  </a>
-                </div>
-                <div id="athleticsQ1" class="collapse show" data-parent="#athleticsAccordion">
-                  <div class="card-body">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="container">
+
+              <p>Some QnA on athletics</p>
+              <div id="athleticsAccordion">
+                <div class="card">
+                  <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#athleticsQ1">
+                      Question1
+                    </a>
+                  </div>
+                  <div id="athleticsQ1" class="collapse show" data-parent="#athleticsAccordion">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                      labore
+                      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                      aliquip ex ea commodo consequat.
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="card">
-                <div class="card-header">
-                  <a class="collapsed card-link" data-toggle="collapse" href="#athleticsQ2">
-                    Question2
-                  </a>
-                </div>
-                <div id="athleticsQ2" class="collapse" data-parent="#athleticsAccordion">
-                  <div class="card-body">
-                    Fictum, deserunt mollit anim laborum astutumque! Quisque placerat facilisis egestas cillum dolore.
-                    Nec dubitamus multa iter quae et nos invenerat. Contra legem facit qui id facit quod lex prohibet.
-                    Quam diu etiam furor iste tuus nos eludet?
-                    Petierunt uti sibi concilium totius Galliae in diem certam indicere. Morbi fringilla convallis
-                    sapien, id pulvinar odio volutpat. A communi observantia non est recedendum.
-                    Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
-                    habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
-                    Praeterea iter est quasdam res quas ex communi.
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#athleticsQ2">
+                      Question2
+                    </a>
+                  </div>
+                  <div id="athleticsQ2" class="collapse" data-parent="#athleticsAccordion">
+                    <div class="card-body">
+                      Fictum, deserunt mollit anim laborum astutumque! Quisque placerat facilisis egestas cillum dolore.
+                      Nec dubitamus multa iter quae et nos invenerat. Contra legem facit qui id facit quod lex prohibet.
+                      Quam diu etiam furor iste tuus nos eludet?
+                      Petierunt uti sibi concilium totius Galliae in diem certam indicere. Morbi fringilla convallis
+                      sapien, id pulvinar odio volutpat. A communi observantia non est recedendum.
+                      Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
+                      habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
+                      Praeterea iter est quasdam res quas ex communi.
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="card">
-                <div class="card-header">
-                  <a class="collapsed card-link" data-toggle="collapse" href="#athleticsQ3">
-                    Question3
-                  </a>
-                </div>
-                <div id="athleticsQ3" class="collapse" data-parent="#athleticsAccordion">
-                  <div class="card-body">
-                    Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
-                    habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
-                    Praeterea iter est quasdam res quas ex communi.
-                    A communi observantia non est recedendum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus.
-                    Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae.
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#athleticsQ3">
+                      Question3
+                    </a>
+                  </div>
+                  <div id="athleticsQ3" class="collapse" data-parent="#athleticsAccordion">
+                    <div class="card-body">
+                      Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
+                      habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
+                      Praeterea iter est quasdam res quas ex communi.
+                      A communi observantia non est recedendum. Vivamus sagittis lacus vel augue laoreet rutrum
+                      faucibus.
+                      Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae.
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="container" id="badminton">
-  <h1 class="text-center">badminton</h1>
+  <div class="container" id="badminton">
+    <h1 class="text-center mt-5 mb-1 text-capitalize">badminton</h1>
 
-  
-    <div class="card" style="width: 20vw;">
-      <img class="card-img-top" src="badminton.png" alt="Card image" style="width:15vw">
-      <div class="card-body">
-        <h4 class="card-title">John Doe</h4>
-        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-        <a data-toggle="modal" data-target="#badmintonModal" class="btn btn-primary stretched-link">See Profile</a>
+    <div class="card-deck">
+      <div class="card">
+        <img class="card-img-top" src="badminton.png" alt="Card image" style="width:15vw">
+        <div class="card-body">
+          <h4 class="card-title">John Doe</h4>
+          <p data-toggle="modal" data-target="#badmintonModal" class="card-text stretched-link">Some example text some
+            example text. John Doe is an architect and engineer</p>
+        </div>
       </div>
     </div>
 
-  
-  <div class="modal fade" id="badmintonModal">
-    <div class="modal-dialog  modal-xl modal-dialog-scrollable">
-      <div class="modal-content">
 
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h1 class="modal-title mx-auto">badminton</h1>
-          <button type="button" class="close" data-dismiss="modal">×</button>
-        </div>
+    <div class="modal fade" id="badmintonModal">
+      <div class="modal-dialog  modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
 
-        <!-- Modal body -->
-        <div class="modal-body">
-          <div class="container">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h1 class="modal-title mx-auto">badminton</h1>
+            <button type="button" class="close" data-dismiss="modal">×</button>
+          </div>
 
-            <p>Some QnA on badminton</p>
-            <div id="badmintonAccordion">
-              <div class="card">
-                <div class="card-header">
-                  <a class="card-link" data-toggle="collapse" href="#badmintonQ1">
-                    Question1
-                  </a>
-                </div>
-                <div id="badmintonQ1" class="collapse show" data-parent="#badmintonAccordion">
-                  <div class="card-body">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="container">
+
+              <p>Some QnA on badminton</p>
+              <div id="badmintonAccordion">
+                <div class="card">
+                  <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#badmintonQ1">
+                      Question1
+                    </a>
+                  </div>
+                  <div id="badmintonQ1" class="collapse show" data-parent="#badmintonAccordion">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                      labore
+                      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                      aliquip ex ea commodo consequat.
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="card">
-                <div class="card-header">
-                  <a class="collapsed card-link" data-toggle="collapse" href="#badmintonQ2">
-                    Question2
-                  </a>
-                </div>
-                <div id="badmintonQ2" class="collapse" data-parent="#badmintonAccordion">
-                  <div class="card-body">
-                    Fictum, deserunt mollit anim laborum astutumque! Quisque placerat facilisis egestas cillum dolore.
-                    Nec dubitamus multa iter quae et nos invenerat. Contra legem facit qui id facit quod lex prohibet.
-                    Quam diu etiam furor iste tuus nos eludet?
-                    Petierunt uti sibi concilium totius Galliae in diem certam indicere. Morbi fringilla convallis
-                    sapien, id pulvinar odio volutpat. A communi observantia non est recedendum.
-                    Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
-                    habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
-                    Praeterea iter est quasdam res quas ex communi.
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#badmintonQ2">
+                      Question2
+                    </a>
+                  </div>
+                  <div id="badmintonQ2" class="collapse" data-parent="#badmintonAccordion">
+                    <div class="card-body">
+                      Fictum, deserunt mollit anim laborum astutumque! Quisque placerat facilisis egestas cillum dolore.
+                      Nec dubitamus multa iter quae et nos invenerat. Contra legem facit qui id facit quod lex prohibet.
+                      Quam diu etiam furor iste tuus nos eludet?
+                      Petierunt uti sibi concilium totius Galliae in diem certam indicere. Morbi fringilla convallis
+                      sapien, id pulvinar odio volutpat. A communi observantia non est recedendum.
+                      Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
+                      habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
+                      Praeterea iter est quasdam res quas ex communi.
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="card">
-                <div class="card-header">
-                  <a class="collapsed card-link" data-toggle="collapse" href="#badmintonQ3">
-                    Question3
-                  </a>
-                </div>
-                <div id="badmintonQ3" class="collapse" data-parent="#badmintonAccordion">
-                  <div class="card-body">
-                    Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
-                    habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
-                    Praeterea iter est quasdam res quas ex communi.
-                    A communi observantia non est recedendum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus.
-                    Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae.
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#badmintonQ3">
+                      Question3
+                    </a>
+                  </div>
+                  <div id="badmintonQ3" class="collapse" data-parent="#badmintonAccordion">
+                    <div class="card-body">
+                      Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
+                      habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
+                      Praeterea iter est quasdam res quas ex communi.
+                      A communi observantia non est recedendum. Vivamus sagittis lacus vel augue laoreet rutrum
+                      faucibus.
+                      Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae.
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="container" id="basketball">
-  <h1 class="text-center">basketball</h1>
+  <div class="container" id="basketball">
+    <h1 class="text-center mt-5 mb-1 text-capitalize">basketball</h1>
 
-  
-    <div class="card" style="width: 20vw;">
-      <img class="card-img-top" src="basketball.png" alt="Card image" style="width:15vw">
-      <div class="card-body">
-        <h4 class="card-title">John Doe</h4>
-        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-        <a data-toggle="modal" data-target="#basketballModal" class="btn btn-primary stretched-link">See Profile</a>
+    <div class="card-deck">
+      <div class="card">
+        <img class="card-img-top" src="basketball.png" alt="Card image" style="width:15vw">
+        <div class="card-body">
+          <h4 class="card-title">John Doe</h4>
+          <p data-toggle="modal" data-target="#basketballModal" class="card-text stretched-link">Some example text some
+            example text. John Doe is an architect and engineer</p>
+        </div>
       </div>
     </div>
 
-  
-  <div class="modal fade" id="basketballModal">
-    <div class="modal-dialog  modal-xl modal-dialog-scrollable">
-      <div class="modal-content">
 
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h1 class="modal-title mx-auto">basketball</h1>
-          <button type="button" class="close" data-dismiss="modal">×</button>
-        </div>
+    <div class="modal fade" id="basketballModal">
+      <div class="modal-dialog  modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
 
-        <!-- Modal body -->
-        <div class="modal-body">
-          <div class="container">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h1 class="modal-title mx-auto">basketball</h1>
+            <button type="button" class="close" data-dismiss="modal">×</button>
+          </div>
 
-            <p>Some QnA on basketball</p>
-            <div id="basketballAccordion">
-              <div class="card">
-                <div class="card-header">
-                  <a class="card-link" data-toggle="collapse" href="#basketballQ1">
-                    Question1
-                  </a>
-                </div>
-                <div id="basketballQ1" class="collapse show" data-parent="#basketballAccordion">
-                  <div class="card-body">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="container">
+
+              <p>Some QnA on basketball</p>
+              <div id="basketballAccordion">
+                <div class="card">
+                  <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#basketballQ1">
+                      Question1
+                    </a>
+                  </div>
+                  <div id="basketballQ1" class="collapse show" data-parent="#basketballAccordion">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                      labore
+                      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                      aliquip ex ea commodo consequat.
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="card">
-                <div class="card-header">
-                  <a class="collapsed card-link" data-toggle="collapse" href="#basketballQ2">
-                    Question2
-                  </a>
-                </div>
-                <div id="basketballQ2" class="collapse" data-parent="#basketballAccordion">
-                  <div class="card-body">
-                    Fictum, deserunt mollit anim laborum astutumque! Quisque placerat facilisis egestas cillum dolore.
-                    Nec dubitamus multa iter quae et nos invenerat. Contra legem facit qui id facit quod lex prohibet.
-                    Quam diu etiam furor iste tuus nos eludet?
-                    Petierunt uti sibi concilium totius Galliae in diem certam indicere. Morbi fringilla convallis
-                    sapien, id pulvinar odio volutpat. A communi observantia non est recedendum.
-                    Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
-                    habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
-                    Praeterea iter est quasdam res quas ex communi.
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#basketballQ2">
+                      Question2
+                    </a>
+                  </div>
+                  <div id="basketballQ2" class="collapse" data-parent="#basketballAccordion">
+                    <div class="card-body">
+                      Fictum, deserunt mollit anim laborum astutumque! Quisque placerat facilisis egestas cillum dolore.
+                      Nec dubitamus multa iter quae et nos invenerat. Contra legem facit qui id facit quod lex prohibet.
+                      Quam diu etiam furor iste tuus nos eludet?
+                      Petierunt uti sibi concilium totius Galliae in diem certam indicere. Morbi fringilla convallis
+                      sapien, id pulvinar odio volutpat. A communi observantia non est recedendum.
+                      Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
+                      habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
+                      Praeterea iter est quasdam res quas ex communi.
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="card">
-                <div class="card-header">
-                  <a class="collapsed card-link" data-toggle="collapse" href="#basketballQ3">
-                    Question3
-                  </a>
-                </div>
-                <div id="basketballQ3" class="collapse" data-parent="#basketballAccordion">
-                  <div class="card-body">
-                    Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
-                    habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
-                    Praeterea iter est quasdam res quas ex communi.
-                    A communi observantia non est recedendum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus.
-                    Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae.
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#basketballQ3">
+                      Question3
+                    </a>
+                  </div>
+                  <div id="basketballQ3" class="collapse" data-parent="#basketballAccordion">
+                    <div class="card-body">
+                      Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
+                      habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
+                      Praeterea iter est quasdam res quas ex communi.
+                      A communi observantia non est recedendum. Vivamus sagittis lacus vel augue laoreet rutrum
+                      faucibus.
+                      Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae.
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="container" id="board-games">
-  <h1 class="text-center">board-games</h1>
+  <div class="container" id="board-games">
+    <h1 class="text-center mt-5 mb-1 text-capitalize">board-games</h1>
 
-  
-    <div class="card" style="width: 20vw;">
-      <img class="card-img-top" src="board-games.png" alt="Card image" style="width:15vw">
-      <div class="card-body">
-        <h4 class="card-title">John Doe</h4>
-        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-        <a data-toggle="modal" data-target="#board-gamesModal" class="btn btn-primary stretched-link">See Profile</a>
+    <div class="card-deck">
+      <div class="card">
+        <img class="card-img-top" src="board-games.png" alt="Card image" style="width:15vw">
+        <div class="card-body">
+          <h4 class="card-title">John Doe</h4>
+          <p data-toggle="modal" data-target="#board-gamesModal" class="card-text stretched-link">Some example text some
+            example text. John Doe is an architect and engineer</p>
+        </div>
       </div>
     </div>
 
-  
-  <div class="modal fade" id="board-gamesModal">
-    <div class="modal-dialog  modal-xl modal-dialog-scrollable">
-      <div class="modal-content">
 
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h1 class="modal-title mx-auto">board-games</h1>
-          <button type="button" class="close" data-dismiss="modal">×</button>
-        </div>
+    <div class="modal fade" id="board-gamesModal">
+      <div class="modal-dialog  modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
 
-        <!-- Modal body -->
-        <div class="modal-body">
-          <div class="container">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h1 class="modal-title mx-auto">board-games</h1>
+            <button type="button" class="close" data-dismiss="modal">×</button>
+          </div>
 
-            <p>Some QnA on board-games</p>
-            <div id="board-gamesAccordion">
-              <div class="card">
-                <div class="card-header">
-                  <a class="card-link" data-toggle="collapse" href="#board-gamesQ1">
-                    Question1
-                  </a>
-                </div>
-                <div id="board-gamesQ1" class="collapse show" data-parent="#board-gamesAccordion">
-                  <div class="card-body">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="container">
+
+              <p>Some QnA on board-games</p>
+              <div id="board-gamesAccordion">
+                <div class="card">
+                  <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#board-gamesQ1">
+                      Question1
+                    </a>
+                  </div>
+                  <div id="board-gamesQ1" class="collapse show" data-parent="#board-gamesAccordion">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                      labore
+                      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                      aliquip ex ea commodo consequat.
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="card">
-                <div class="card-header">
-                  <a class="collapsed card-link" data-toggle="collapse" href="#board-gamesQ2">
-                    Question2
-                  </a>
-                </div>
-                <div id="board-gamesQ2" class="collapse" data-parent="#board-gamesAccordion">
-                  <div class="card-body">
-                    Fictum, deserunt mollit anim laborum astutumque! Quisque placerat facilisis egestas cillum dolore.
-                    Nec dubitamus multa iter quae et nos invenerat. Contra legem facit qui id facit quod lex prohibet.
-                    Quam diu etiam furor iste tuus nos eludet?
-                    Petierunt uti sibi concilium totius Galliae in diem certam indicere. Morbi fringilla convallis
-                    sapien, id pulvinar odio volutpat. A communi observantia non est recedendum.
-                    Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
-                    habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
-                    Praeterea iter est quasdam res quas ex communi.
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#board-gamesQ2">
+                      Question2
+                    </a>
+                  </div>
+                  <div id="board-gamesQ2" class="collapse" data-parent="#board-gamesAccordion">
+                    <div class="card-body">
+                      Fictum, deserunt mollit anim laborum astutumque! Quisque placerat facilisis egestas cillum dolore.
+                      Nec dubitamus multa iter quae et nos invenerat. Contra legem facit qui id facit quod lex prohibet.
+                      Quam diu etiam furor iste tuus nos eludet?
+                      Petierunt uti sibi concilium totius Galliae in diem certam indicere. Morbi fringilla convallis
+                      sapien, id pulvinar odio volutpat. A communi observantia non est recedendum.
+                      Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
+                      habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
+                      Praeterea iter est quasdam res quas ex communi.
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="card">
-                <div class="card-header">
-                  <a class="collapsed card-link" data-toggle="collapse" href="#board-gamesQ3">
-                    Question3
-                  </a>
-                </div>
-                <div id="board-gamesQ3" class="collapse" data-parent="#board-gamesAccordion">
-                  <div class="card-body">
-                    Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
-                    habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
-                    Praeterea iter est quasdam res quas ex communi.
-                    A communi observantia non est recedendum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus.
-                    Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae.
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#board-gamesQ3">
+                      Question3
+                    </a>
+                  </div>
+                  <div id="board-gamesQ3" class="collapse" data-parent="#board-gamesAccordion">
+                    <div class="card-body">
+                      Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
+                      habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
+                      Praeterea iter est quasdam res quas ex communi.
+                      A communi observantia non est recedendum. Vivamus sagittis lacus vel augue laoreet rutrum
+                      faucibus.
+                      Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae.
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="container" id="cricket">
-  <h1 class="text-center">cricket</h1>
+  <div class="container" id="cricket">
+    <h1 class="text-center mt-5 mb-1 text-capitalize">cricket</h1>
 
-  
-    <div class="card" style="width: 20vw;">
-      <img class="card-img-top" src="cricket.png" alt="Card image" style="width:15vw">
-      <div class="card-body">
-        <h4 class="card-title">John Doe</h4>
-        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-        <a data-toggle="modal" data-target="#cricketModal" class="btn btn-primary stretched-link">See Profile</a>
+    <div class="card-deck">
+      <div class="card">
+        <img class="card-img-top" src="cricket.png" alt="Card image" style="width:15vw">
+        <div class="card-body">
+          <h4 class="card-title">John Doe</h4>
+          <p data-toggle="modal" data-target="#cricketModal" class="card-text stretched-link">Some example text some
+            example text. John Doe is an architect and engineer</p>
+        </div>
       </div>
     </div>
 
-  
-  <div class="modal fade" id="cricketModal">
-    <div class="modal-dialog  modal-xl modal-dialog-scrollable">
-      <div class="modal-content">
 
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h1 class="modal-title mx-auto">cricket</h1>
-          <button type="button" class="close" data-dismiss="modal">×</button>
-        </div>
+    <div class="modal fade" id="cricketModal">
+      <div class="modal-dialog  modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
 
-        <!-- Modal body -->
-        <div class="modal-body">
-          <div class="container">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h1 class="modal-title mx-auto">cricket</h1>
+            <button type="button" class="close" data-dismiss="modal">×</button>
+          </div>
 
-            <p>Some QnA on cricket</p>
-            <div id="cricketAccordion">
-              <div class="card">
-                <div class="card-header">
-                  <a class="card-link" data-toggle="collapse" href="#cricketQ1">
-                    Question1
-                  </a>
-                </div>
-                <div id="cricketQ1" class="collapse show" data-parent="#cricketAccordion">
-                  <div class="card-body">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="container">
+
+              <p>Some QnA on cricket</p>
+              <div id="cricketAccordion">
+                <div class="card">
+                  <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#cricketQ1">
+                      Question1
+                    </a>
+                  </div>
+                  <div id="cricketQ1" class="collapse show" data-parent="#cricketAccordion">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                      labore
+                      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                      aliquip ex ea commodo consequat.
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="card">
-                <div class="card-header">
-                  <a class="collapsed card-link" data-toggle="collapse" href="#cricketQ2">
-                    Question2
-                  </a>
-                </div>
-                <div id="cricketQ2" class="collapse" data-parent="#cricketAccordion">
-                  <div class="card-body">
-                    Fictum, deserunt mollit anim laborum astutumque! Quisque placerat facilisis egestas cillum dolore.
-                    Nec dubitamus multa iter quae et nos invenerat. Contra legem facit qui id facit quod lex prohibet.
-                    Quam diu etiam furor iste tuus nos eludet?
-                    Petierunt uti sibi concilium totius Galliae in diem certam indicere. Morbi fringilla convallis
-                    sapien, id pulvinar odio volutpat. A communi observantia non est recedendum.
-                    Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
-                    habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
-                    Praeterea iter est quasdam res quas ex communi.
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#cricketQ2">
+                      Question2
+                    </a>
+                  </div>
+                  <div id="cricketQ2" class="collapse" data-parent="#cricketAccordion">
+                    <div class="card-body">
+                      Fictum, deserunt mollit anim laborum astutumque! Quisque placerat facilisis egestas cillum dolore.
+                      Nec dubitamus multa iter quae et nos invenerat. Contra legem facit qui id facit quod lex prohibet.
+                      Quam diu etiam furor iste tuus nos eludet?
+                      Petierunt uti sibi concilium totius Galliae in diem certam indicere. Morbi fringilla convallis
+                      sapien, id pulvinar odio volutpat. A communi observantia non est recedendum.
+                      Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
+                      habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
+                      Praeterea iter est quasdam res quas ex communi.
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="card">
-                <div class="card-header">
-                  <a class="collapsed card-link" data-toggle="collapse" href="#cricketQ3">
-                    Question3
-                  </a>
-                </div>
-                <div id="cricketQ3" class="collapse" data-parent="#cricketAccordion">
-                  <div class="card-body">
-                    Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
-                    habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
-                    Praeterea iter est quasdam res quas ex communi.
-                    A communi observantia non est recedendum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus.
-                    Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae.
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#cricketQ3">
+                      Question3
+                    </a>
+                  </div>
+                  <div id="cricketQ3" class="collapse" data-parent="#cricketAccordion">
+                    <div class="card-body">
+                      Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
+                      habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
+                      Praeterea iter est quasdam res quas ex communi.
+                      A communi observantia non est recedendum. Vivamus sagittis lacus vel augue laoreet rutrum
+                      faucibus.
+                      Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae.
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="container" id="hockey">
-  <h1 class="text-center">hockey</h1>
+  <div class="container" id="hockey">
+    <h1 class="text-center mt-5 mb-1 text-capitalize">hockey</h1>
 
-  
-    <div class="card" style="width: 20vw;">
-      <img class="card-img-top" src="hockey.png" alt="Card image" style="width:15vw">
-      <div class="card-body">
-        <h4 class="card-title">John Doe</h4>
-        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-        <a data-toggle="modal" data-target="#hockeyModal" class="btn btn-primary stretched-link">See Profile</a>
+    <div class="card-deck">
+      <div class="card">
+        <img class="card-img-top" src="hockey.png" alt="Card image" style="width:15vw">
+        <div class="card-body">
+          <h4 class="card-title">John Doe</h4>
+          <p data-toggle="modal" data-target="#hockeyModal" class="card-text stretched-link">Some example text some
+            example text. John Doe is an architect and engineer</p>
+        </div>
       </div>
     </div>
 
-  
-  <div class="modal fade" id="hockeyModal">
-    <div class="modal-dialog  modal-xl modal-dialog-scrollable">
-      <div class="modal-content">
 
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h1 class="modal-title mx-auto">hockey</h1>
-          <button type="button" class="close" data-dismiss="modal">×</button>
-        </div>
+    <div class="modal fade" id="hockeyModal">
+      <div class="modal-dialog  modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
 
-        <!-- Modal body -->
-        <div class="modal-body">
-          <div class="container">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h1 class="modal-title mx-auto">hockey</h1>
+            <button type="button" class="close" data-dismiss="modal">×</button>
+          </div>
 
-            <p>Some QnA on hockey</p>
-            <div id="hockeyAccordion">
-              <div class="card">
-                <div class="card-header">
-                  <a class="card-link" data-toggle="collapse" href="#hockeyQ1">
-                    Question1
-                  </a>
-                </div>
-                <div id="hockeyQ1" class="collapse show" data-parent="#hockeyAccordion">
-                  <div class="card-body">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="container">
+
+              <p>Some QnA on hockey</p>
+              <div id="hockeyAccordion">
+                <div class="card">
+                  <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#hockeyQ1">
+                      Question1
+                    </a>
+                  </div>
+                  <div id="hockeyQ1" class="collapse show" data-parent="#hockeyAccordion">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                      labore
+                      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                      aliquip ex ea commodo consequat.
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="card">
-                <div class="card-header">
-                  <a class="collapsed card-link" data-toggle="collapse" href="#hockeyQ2">
-                    Question2
-                  </a>
-                </div>
-                <div id="hockeyQ2" class="collapse" data-parent="#hockeyAccordion">
-                  <div class="card-body">
-                    Fictum, deserunt mollit anim laborum astutumque! Quisque placerat facilisis egestas cillum dolore.
-                    Nec dubitamus multa iter quae et nos invenerat. Contra legem facit qui id facit quod lex prohibet.
-                    Quam diu etiam furor iste tuus nos eludet?
-                    Petierunt uti sibi concilium totius Galliae in diem certam indicere. Morbi fringilla convallis
-                    sapien, id pulvinar odio volutpat. A communi observantia non est recedendum.
-                    Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
-                    habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
-                    Praeterea iter est quasdam res quas ex communi.
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#hockeyQ2">
+                      Question2
+                    </a>
+                  </div>
+                  <div id="hockeyQ2" class="collapse" data-parent="#hockeyAccordion">
+                    <div class="card-body">
+                      Fictum, deserunt mollit anim laborum astutumque! Quisque placerat facilisis egestas cillum dolore.
+                      Nec dubitamus multa iter quae et nos invenerat. Contra legem facit qui id facit quod lex prohibet.
+                      Quam diu etiam furor iste tuus nos eludet?
+                      Petierunt uti sibi concilium totius Galliae in diem certam indicere. Morbi fringilla convallis
+                      sapien, id pulvinar odio volutpat. A communi observantia non est recedendum.
+                      Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
+                      habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
+                      Praeterea iter est quasdam res quas ex communi.
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="card">
-                <div class="card-header">
-                  <a class="collapsed card-link" data-toggle="collapse" href="#hockeyQ3">
-                    Question3
-                  </a>
-                </div>
-                <div id="hockeyQ3" class="collapse" data-parent="#hockeyAccordion">
-                  <div class="card-body">
-                    Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
-                    habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
-                    Praeterea iter est quasdam res quas ex communi.
-                    A communi observantia non est recedendum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus.
-                    Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae.
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#hockeyQ3">
+                      Question3
+                    </a>
+                  </div>
+                  <div id="hockeyQ3" class="collapse" data-parent="#hockeyAccordion">
+                    <div class="card-body">
+                      Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
+                      habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
+                      Praeterea iter est quasdam res quas ex communi.
+                      A communi observantia non est recedendum. Vivamus sagittis lacus vel augue laoreet rutrum
+                      faucibus.
+                      Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae.
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="container" id="football">
-  <h1 class="text-center">football</h1>
+  <div class="container" id="football">
+    <h1 class="text-center mt-5 mb-1 text-capitalize">football</h1>
 
-  
-    <div class="card" style="width: 20vw;">
-      <img class="card-img-top" src="football.png" alt="Card image" style="width:15vw">
-      <div class="card-body">
-        <h4 class="card-title">John Doe</h4>
-        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-        <a data-toggle="modal" data-target="#footballModal" class="btn btn-primary stretched-link">See Profile</a>
+    <div class="card-deck">
+      <div class="card">
+        <img class="card-img-top" src="football.png" alt="Card image" style="width:15vw">
+        <div class="card-body">
+          <h4 class="card-title">John Doe</h4>
+          <p data-toggle="modal" class="card-text">Some example text some example text. John Doe is an architect and
+            engineer</p>
+        </div>
       </div>
     </div>
 
-  
-  <div class="modal fade" id="footballModal">
-    <div class="modal-dialog  modal-xl modal-dialog-scrollable">
-      <div class="modal-content">
 
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h1 class="modal-title mx-auto">football</h1>
-          <button type="button" class="close" data-dismiss="modal">×</button>
-        </div>
+    <div class="modal fade" id="footballModal">
+      <div class="modal-dialog  modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
 
-        <!-- Modal body -->
-        <div class="modal-body">
-          <div class="container">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h1 class="modal-title mx-auto">football</h1>
+            <button type="button" class="close" data-dismiss="modal">×</button>
+          </div>
 
-            <p>Some QnA on football</p>
-            <div id="footballAccordion">
-              <div class="card">
-                <div class="card-header">
-                  <a class="card-link" data-toggle="collapse" href="#footballQ1">
-                    Question1
-                  </a>
-                </div>
-                <div id="footballQ1" class="collapse show" data-parent="#footballAccordion">
-                  <div class="card-body">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="container">
+
+              <p>Some QnA on football</p>
+              <div id="footballAccordion">
+                <div class="card">
+                  <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#footballQ1">
+                      Question1
+                    </a>
+                  </div>
+                  <div id="footballQ1" class="collapse show" data-parent="#footballAccordion">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                      labore
+                      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                      aliquip ex ea commodo consequat.
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="card">
-                <div class="card-header">
-                  <a class="collapsed card-link" data-toggle="collapse" href="#footballQ2">
-                    Question2
-                  </a>
-                </div>
-                <div id="footballQ2" class="collapse" data-parent="#footballAccordion">
-                  <div class="card-body">
-                    Fictum, deserunt mollit anim laborum astutumque! Quisque placerat facilisis egestas cillum dolore.
-                    Nec dubitamus multa iter quae et nos invenerat. Contra legem facit qui id facit quod lex prohibet.
-                    Quam diu etiam furor iste tuus nos eludet?
-                    Petierunt uti sibi concilium totius Galliae in diem certam indicere. Morbi fringilla convallis
-                    sapien, id pulvinar odio volutpat. A communi observantia non est recedendum.
-                    Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
-                    habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
-                    Praeterea iter est quasdam res quas ex communi.
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#footballQ2">
+                      Question2
+                    </a>
+                  </div>
+                  <div id="footballQ2" class="collapse" data-parent="#footballAccordion">
+                    <div class="card-body">
+                      Fictum, deserunt mollit anim laborum astutumque! Quisque placerat facilisis egestas cillum dolore.
+                      Nec dubitamus multa iter quae et nos invenerat. Contra legem facit qui id facit quod lex prohibet.
+                      Quam diu etiam furor iste tuus nos eludet?
+                      Petierunt uti sibi concilium totius Galliae in diem certam indicere. Morbi fringilla convallis
+                      sapien, id pulvinar odio volutpat. A communi observantia non est recedendum.
+                      Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
+                      habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
+                      Praeterea iter est quasdam res quas ex communi.
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="card">
-                <div class="card-header">
-                  <a class="collapsed card-link" data-toggle="collapse" href="#footballQ3">
-                    Question3
-                  </a>
-                </div>
-                <div id="footballQ3" class="collapse" data-parent="#footballAccordion">
-                  <div class="card-body">
-                    Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
-                    habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
-                    Praeterea iter est quasdam res quas ex communi.
-                    A communi observantia non est recedendum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus.
-                    Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae.
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#footballQ3">
+                      Question3
+                    </a>
+                  </div>
+                  <div id="footballQ3" class="collapse" data-parent="#footballAccordion">
+                    <div class="card-body">
+                      Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
+                      habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
+                      Praeterea iter est quasdam res quas ex communi.
+                      A communi observantia non est recedendum. Vivamus sagittis lacus vel augue laoreet rutrum
+                      faucibus.
+                      Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae.
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="container" id="kho-kho">
-  <h1 class="text-center">kho-kho</h1>
+  <div class="container" id="kho-kho">
+    <h1 class="text-center mt-5 mb-1 text-capitalize">kho-kho</h1>
 
-  
-    <div class="card" style="width: 20vw;">
-      <img class="card-img-top" src="kho-kho.png" alt="Card image" style="width:15vw">
-      <div class="card-body">
-        <h4 class="card-title">John Doe</h4>
-        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-        <a data-toggle="modal" data-target="#kho-khoModal" class="btn btn-primary stretched-link">See Profile</a>
+    <div class="card-deck">
+      <div class="card">
+        <img class="card-img-top" src="kho-kho.png" alt="Card image" style="width:15vw">
+        <div class="card-body">
+          <h4 class="card-title">John Doe</h4>
+          <p data-toggle="modal" data-target="#kho-khoModal" class="card-text stretched-link">Some example text some
+            example text. John Doe is an architect and engineer</p>
+        </div>
       </div>
     </div>
 
-  
-  <div class="modal fade" id="kho-khoModal">
-    <div class="modal-dialog  modal-xl modal-dialog-scrollable">
-      <div class="modal-content">
 
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h1 class="modal-title mx-auto">kho-kho</h1>
-          <button type="button" class="close" data-dismiss="modal">×</button>
-        </div>
+    <div class="modal fade" id="kho-khoModal">
+      <div class="modal-dialog  modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
 
-        <!-- Modal body -->
-        <div class="modal-body">
-          <div class="container">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h1 class="modal-title mx-auto">kho-kho</h1>
+            <button type="button" class="close" data-dismiss="modal">×</button>
+          </div>
 
-            <p>Some QnA on kho-kho</p>
-            <div id="kho-khoAccordion">
-              <div class="card">
-                <div class="card-header">
-                  <a class="card-link" data-toggle="collapse" href="#kho-khoQ1">
-                    Question1
-                  </a>
-                </div>
-                <div id="kho-khoQ1" class="collapse show" data-parent="#kho-khoAccordion">
-                  <div class="card-body">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="container">
+
+              <p>Some QnA on kho-kho</p>
+              <div id="kho-khoAccordion">
+                <div class="card">
+                  <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#kho-khoQ1">
+                      Question1
+                    </a>
+                  </div>
+                  <div id="kho-khoQ1" class="collapse show" data-parent="#kho-khoAccordion">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                      labore
+                      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                      aliquip ex ea commodo consequat.
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="card">
-                <div class="card-header">
-                  <a class="collapsed card-link" data-toggle="collapse" href="#kho-khoQ2">
-                    Question2
-                  </a>
-                </div>
-                <div id="kho-khoQ2" class="collapse" data-parent="#kho-khoAccordion">
-                  <div class="card-body">
-                    Fictum, deserunt mollit anim laborum astutumque! Quisque placerat facilisis egestas cillum dolore.
-                    Nec dubitamus multa iter quae et nos invenerat. Contra legem facit qui id facit quod lex prohibet.
-                    Quam diu etiam furor iste tuus nos eludet?
-                    Petierunt uti sibi concilium totius Galliae in diem certam indicere. Morbi fringilla convallis
-                    sapien, id pulvinar odio volutpat. A communi observantia non est recedendum.
-                    Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
-                    habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
-                    Praeterea iter est quasdam res quas ex communi.
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#kho-khoQ2">
+                      Question2
+                    </a>
+                  </div>
+                  <div id="kho-khoQ2" class="collapse" data-parent="#kho-khoAccordion">
+                    <div class="card-body">
+                      Fictum, deserunt mollit anim laborum astutumque! Quisque placerat facilisis egestas cillum dolore.
+                      Nec dubitamus multa iter quae et nos invenerat. Contra legem facit qui id facit quod lex prohibet.
+                      Quam diu etiam furor iste tuus nos eludet?
+                      Petierunt uti sibi concilium totius Galliae in diem certam indicere. Morbi fringilla convallis
+                      sapien, id pulvinar odio volutpat. A communi observantia non est recedendum.
+                      Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
+                      habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
+                      Praeterea iter est quasdam res quas ex communi.
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="card">
-                <div class="card-header">
-                  <a class="collapsed card-link" data-toggle="collapse" href="#kho-khoQ3">
-                    Question3
-                  </a>
-                </div>
-                <div id="kho-khoQ3" class="collapse" data-parent="#kho-khoAccordion">
-                  <div class="card-body">
-                    Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
-                    habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
-                    Praeterea iter est quasdam res quas ex communi.
-                    A communi observantia non est recedendum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus.
-                    Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae.
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#kho-khoQ3">
+                      Question3
+                    </a>
+                  </div>
+                  <div id="kho-khoQ3" class="collapse" data-parent="#kho-khoAccordion">
+                    <div class="card-body">
+                      Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
+                      habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
+                      Praeterea iter est quasdam res quas ex communi.
+                      A communi observantia non est recedendum. Vivamus sagittis lacus vel augue laoreet rutrum
+                      faucibus.
+                      Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae.
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="container" id="lawn-tennis">
-  <h1 class="text-center">lawn-tennis</h1>
+  <div class="container" id="lawn-tennis">
+    <h1 class="text-center mt-5 mb-1 text-capitalize">lawn-tennis</h1>
 
-  
-    <div class="card" style="width: 20vw;">
-      <img class="card-img-top" src="lawn-tennis.png" alt="Card image" style="width:15vw">
-      <div class="card-body">
-        <h4 class="card-title">John Doe</h4>
-        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-        <a data-toggle="modal" data-target="#lawn-tennisModal" class="btn btn-primary stretched-link">See Profile</a>
+    <div class="card-deck">
+      <div class="card">
+        <img class="card-img-top" src="lawn-tennis.png" alt="Card image" style="width:15vw">
+        <div class="card-body">
+          <h4 class="card-title">John Doe</h4>
+          <p data-toggle="modal" data-target="#lawn-tennisModal" class="card-text stretched-link">Some example text some
+            example text. John Doe is an architect and engineer</p>
+        </div>
       </div>
     </div>
 
-  
-  <div class="modal fade" id="lawn-tennisModal">
-    <div class="modal-dialog  modal-xl modal-dialog-scrollable">
-      <div class="modal-content">
 
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h1 class="modal-title mx-auto">lawn-tennis</h1>
-          <button type="button" class="close" data-dismiss="modal">×</button>
-        </div>
+    <div class="modal fade" id="lawn-tennisModal">
+      <div class="modal-dialog  modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
 
-        <!-- Modal body -->
-        <div class="modal-body">
-          <div class="container">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h1 class="modal-title mx-auto">lawn-tennis</h1>
+            <button type="button" class="close" data-dismiss="modal">×</button>
+          </div>
 
-            <p>Some QnA on lawn-tennis</p>
-            <div id="lawn-tennisAccordion">
-              <div class="card">
-                <div class="card-header">
-                  <a class="card-link" data-toggle="collapse" href="#lawn-tennisQ1">
-                    Question1
-                  </a>
-                </div>
-                <div id="lawn-tennisQ1" class="collapse show" data-parent="#lawn-tennisAccordion">
-                  <div class="card-body">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="container">
+
+              <p>Some QnA on lawn-tennis</p>
+              <div id="lawn-tennisAccordion">
+                <div class="card">
+                  <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#lawn-tennisQ1">
+                      Question1
+                    </a>
+                  </div>
+                  <div id="lawn-tennisQ1" class="collapse show" data-parent="#lawn-tennisAccordion">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                      labore
+                      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                      aliquip ex ea commodo consequat.
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="card">
-                <div class="card-header">
-                  <a class="collapsed card-link" data-toggle="collapse" href="#lawn-tennisQ2">
-                    Question2
-                  </a>
-                </div>
-                <div id="lawn-tennisQ2" class="collapse" data-parent="#lawn-tennisAccordion">
-                  <div class="card-body">
-                    Fictum, deserunt mollit anim laborum astutumque! Quisque placerat facilisis egestas cillum dolore.
-                    Nec dubitamus multa iter quae et nos invenerat. Contra legem facit qui id facit quod lex prohibet.
-                    Quam diu etiam furor iste tuus nos eludet?
-                    Petierunt uti sibi concilium totius Galliae in diem certam indicere. Morbi fringilla convallis
-                    sapien, id pulvinar odio volutpat. A communi observantia non est recedendum.
-                    Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
-                    habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
-                    Praeterea iter est quasdam res quas ex communi.
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#lawn-tennisQ2">
+                      Question2
+                    </a>
+                  </div>
+                  <div id="lawn-tennisQ2" class="collapse" data-parent="#lawn-tennisAccordion">
+                    <div class="card-body">
+                      Fictum, deserunt mollit anim laborum astutumque! Quisque placerat facilisis egestas cillum dolore.
+                      Nec dubitamus multa iter quae et nos invenerat. Contra legem facit qui id facit quod lex prohibet.
+                      Quam diu etiam furor iste tuus nos eludet?
+                      Petierunt uti sibi concilium totius Galliae in diem certam indicere. Morbi fringilla convallis
+                      sapien, id pulvinar odio volutpat. A communi observantia non est recedendum.
+                      Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
+                      habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
+                      Praeterea iter est quasdam res quas ex communi.
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="card">
-                <div class="card-header">
-                  <a class="collapsed card-link" data-toggle="collapse" href="#lawn-tennisQ3">
-                    Question3
-                  </a>
-                </div>
-                <div id="lawn-tennisQ3" class="collapse" data-parent="#lawn-tennisAccordion">
-                  <div class="card-body">
-                    Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
-                    habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
-                    Praeterea iter est quasdam res quas ex communi.
-                    A communi observantia non est recedendum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus.
-                    Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae.
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#lawn-tennisQ3">
+                      Question3
+                    </a>
+                  </div>
+                  <div id="lawn-tennisQ3" class="collapse" data-parent="#lawn-tennisAccordion">
+                    <div class="card-body">
+                      Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
+                      habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
+                      Praeterea iter est quasdam res quas ex communi.
+                      A communi observantia non est recedendum. Vivamus sagittis lacus vel augue laoreet rutrum
+                      faucibus.
+                      Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae.
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="container" id="squash">
-  <h1 class="text-center">squash</h1>
+  <div class="container" id="squash">
+    <h1 class="text-center mt-5 mb-1 text-capitalize">squash</h1>
 
-  
-    <div class="card" style="width: 20vw;">
-      <img class="card-img-top" src="squash.png" alt="Card image" style="width:15vw">
-      <div class="card-body">
-        <h4 class="card-title">John Doe</h4>
-        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-        <a data-toggle="modal" data-target="#squashModal" class="btn btn-primary stretched-link">See Profile</a>
+    <div class="card-deck">
+      <div class="card">
+        <img class="card-img-top" src="squash.png" alt="Card image" style="width:15vw">
+        <div class="card-body">
+          <h4 class="card-title">John Doe</h4>
+          <p data-toggle="modal" data-target="#squashModal" class="card-text stretched-link">Some example text some
+            example text. John Doe is an architect and engineer</p>
+        </div>
       </div>
     </div>
 
-  
-  <div class="modal fade" id="squashModal">
-    <div class="modal-dialog  modal-xl modal-dialog-scrollable">
-      <div class="modal-content">
 
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h1 class="modal-title mx-auto">squash</h1>
-          <button type="button" class="close" data-dismiss="modal">×</button>
-        </div>
+    <div class="modal fade" id="squashModal">
+      <div class="modal-dialog  modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
 
-        <!-- Modal body -->
-        <div class="modal-body">
-          <div class="container">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h1 class="modal-title mx-auto">squash</h1>
+            <button type="button" class="close" data-dismiss="modal">×</button>
+          </div>
 
-            <p>Some QnA on squash</p>
-            <div id="squashAccordion">
-              <div class="card">
-                <div class="card-header">
-                  <a class="card-link" data-toggle="collapse" href="#squashQ1">
-                    Question1
-                  </a>
-                </div>
-                <div id="squashQ1" class="collapse show" data-parent="#squashAccordion">
-                  <div class="card-body">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="container">
+
+              <p>Some QnA on squash</p>
+              <div id="squashAccordion">
+                <div class="card">
+                  <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#squashQ1">
+                      Question1
+                    </a>
+                  </div>
+                  <div id="squashQ1" class="collapse show" data-parent="#squashAccordion">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                      labore
+                      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                      aliquip ex ea commodo consequat.
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="card">
-                <div class="card-header">
-                  <a class="collapsed card-link" data-toggle="collapse" href="#squashQ2">
-                    Question2
-                  </a>
-                </div>
-                <div id="squashQ2" class="collapse" data-parent="#squashAccordion">
-                  <div class="card-body">
-                    Fictum, deserunt mollit anim laborum astutumque! Quisque placerat facilisis egestas cillum dolore.
-                    Nec dubitamus multa iter quae et nos invenerat. Contra legem facit qui id facit quod lex prohibet.
-                    Quam diu etiam furor iste tuus nos eludet?
-                    Petierunt uti sibi concilium totius Galliae in diem certam indicere. Morbi fringilla convallis
-                    sapien, id pulvinar odio volutpat. A communi observantia non est recedendum.
-                    Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
-                    habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
-                    Praeterea iter est quasdam res quas ex communi.
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#squashQ2">
+                      Question2
+                    </a>
+                  </div>
+                  <div id="squashQ2" class="collapse" data-parent="#squashAccordion">
+                    <div class="card-body">
+                      Fictum, deserunt mollit anim laborum astutumque! Quisque placerat facilisis egestas cillum dolore.
+                      Nec dubitamus multa iter quae et nos invenerat. Contra legem facit qui id facit quod lex prohibet.
+                      Quam diu etiam furor iste tuus nos eludet?
+                      Petierunt uti sibi concilium totius Galliae in diem certam indicere. Morbi fringilla convallis
+                      sapien, id pulvinar odio volutpat. A communi observantia non est recedendum.
+                      Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
+                      habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
+                      Praeterea iter est quasdam res quas ex communi.
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="card">
-                <div class="card-header">
-                  <a class="collapsed card-link" data-toggle="collapse" href="#squashQ3">
-                    Question3
-                  </a>
-                </div>
-                <div id="squashQ3" class="collapse" data-parent="#squashAccordion">
-                  <div class="card-body">
-                    Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
-                    habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
-                    Praeterea iter est quasdam res quas ex communi.
-                    A communi observantia non est recedendum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus.
-                    Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae.
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#squashQ3">
+                      Question3
+                    </a>
+                  </div>
+                  <div id="squashQ3" class="collapse" data-parent="#squashAccordion">
+                    <div class="card-body">
+                      Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
+                      habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
+                      Praeterea iter est quasdam res quas ex communi.
+                      A communi observantia non est recedendum. Vivamus sagittis lacus vel augue laoreet rutrum
+                      faucibus.
+                      Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae.
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="container" id="table-tennis">
-  <h1 class="text-center">table-tennis</h1>
+  <div class="container" id="table-tennis">
+    <h1 class="text-center mt-5 mb-1 text-capitalize">table-tennis</h1>
 
-  
-    <div class="card" style="width: 20vw;">
-      <img class="card-img-top" src="table-tennis.png" alt="Card image" style="width:15vw">
-      <div class="card-body">
-        <h4 class="card-title">John Doe</h4>
-        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-        <a data-toggle="modal" data-target="#table-tennisModal" class="btn btn-primary stretched-link">See Profile</a>
+    <div class="card-deck">
+      <div class="card">
+        <img class="card-img-top" src="table-tennis.png" alt="Card image" style="width:15vw">
+        <div class="card-body">
+          <h4 class="card-title">John Doe</h4>
+          <p data-toggle="modal" data-target="#table-tennisModal" class="card-text stretched-link">Some example text
+            some example text. John Doe is an architect and engineer</p>
+        </div>
       </div>
     </div>
 
-  
-  <div class="modal fade" id="table-tennisModal">
-    <div class="modal-dialog  modal-xl modal-dialog-scrollable">
-      <div class="modal-content">
 
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h1 class="modal-title mx-auto">table-tennis</h1>
-          <button type="button" class="close" data-dismiss="modal">×</button>
-        </div>
+    <div class="modal fade" id="table-tennisModal">
+      <div class="modal-dialog  modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
 
-        <!-- Modal body -->
-        <div class="modal-body">
-          <div class="container">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h1 class="modal-title mx-auto">table-tennis</h1>
+            <button type="button" class="close" data-dismiss="modal">×</button>
+          </div>
 
-            <p>Some QnA on table-tennis</p>
-            <div id="table-tennisAccordion">
-              <div class="card">
-                <div class="card-header">
-                  <a class="card-link" data-toggle="collapse" href="#table-tennisQ1">
-                    Question1
-                  </a>
-                </div>
-                <div id="table-tennisQ1" class="collapse show" data-parent="#table-tennisAccordion">
-                  <div class="card-body">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="container">
+
+              <p>Some QnA on table-tennis</p>
+              <div id="table-tennisAccordion">
+                <div class="card">
+                  <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#table-tennisQ1">
+                      Question1
+                    </a>
+                  </div>
+                  <div id="table-tennisQ1" class="collapse show" data-parent="#table-tennisAccordion">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                      labore
+                      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                      aliquip ex ea commodo consequat.
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="card">
-                <div class="card-header">
-                  <a class="collapsed card-link" data-toggle="collapse" href="#table-tennisQ2">
-                    Question2
-                  </a>
-                </div>
-                <div id="table-tennisQ2" class="collapse" data-parent="#table-tennisAccordion">
-                  <div class="card-body">
-                    Fictum, deserunt mollit anim laborum astutumque! Quisque placerat facilisis egestas cillum dolore.
-                    Nec dubitamus multa iter quae et nos invenerat. Contra legem facit qui id facit quod lex prohibet.
-                    Quam diu etiam furor iste tuus nos eludet?
-                    Petierunt uti sibi concilium totius Galliae in diem certam indicere. Morbi fringilla convallis
-                    sapien, id pulvinar odio volutpat. A communi observantia non est recedendum.
-                    Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
-                    habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
-                    Praeterea iter est quasdam res quas ex communi.
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#table-tennisQ2">
+                      Question2
+                    </a>
+                  </div>
+                  <div id="table-tennisQ2" class="collapse" data-parent="#table-tennisAccordion">
+                    <div class="card-body">
+                      Fictum, deserunt mollit anim laborum astutumque! Quisque placerat facilisis egestas cillum dolore.
+                      Nec dubitamus multa iter quae et nos invenerat. Contra legem facit qui id facit quod lex prohibet.
+                      Quam diu etiam furor iste tuus nos eludet?
+                      Petierunt uti sibi concilium totius Galliae in diem certam indicere. Morbi fringilla convallis
+                      sapien, id pulvinar odio volutpat. A communi observantia non est recedendum.
+                      Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
+                      habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
+                      Praeterea iter est quasdam res quas ex communi.
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="card">
-                <div class="card-header">
-                  <a class="collapsed card-link" data-toggle="collapse" href="#table-tennisQ3">
-                    Question3
-                  </a>
-                </div>
-                <div id="table-tennisQ3" class="collapse" data-parent="#table-tennisAccordion">
-                  <div class="card-body">
-                    Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
-                    habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
-                    Praeterea iter est quasdam res quas ex communi.
-                    A communi observantia non est recedendum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus.
-                    Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae.
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#table-tennisQ3">
+                      Question3
+                    </a>
+                  </div>
+                  <div id="table-tennisQ3" class="collapse" data-parent="#table-tennisAccordion">
+                    <div class="card-body">
+                      Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
+                      habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
+                      Praeterea iter est quasdam res quas ex communi.
+                      A communi observantia non est recedendum. Vivamus sagittis lacus vel augue laoreet rutrum
+                      faucibus.
+                      Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae.
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="container" id="volleyball">
-  <h1 class="text-center">volleyball</h1>
+  <div class="container" id="volleyball">
+    <h1 class="text-center mt-5 mb-1 text-capitalize">volleyball</h1>
 
-  
-    <div class="card" style="width: 20vw;">
-      <img class="card-img-top" src="volleyball.png" alt="Card image" style="width:15vw">
-      <div class="card-body">
-        <h4 class="card-title">John Doe</h4>
-        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-        <a data-toggle="modal" data-target="#volleyballModal" class="btn btn-primary stretched-link">See Profile</a>
+    <div class="card-deck">
+      <div class="card">
+        <img class="card-img-top" src="volleyball.png" alt="Card image" style="width:15vw">
+        <div class="card-body">
+          <h4 class="card-title">John Doe</h4>
+          <p data-toggle="modal" data-target="#volleyballModal" class="card-text stretched-link">Some example text some
+            example text. John Doe is an architect and engineer</p>
+        </div>
       </div>
     </div>
 
-  
-  <div class="modal fade" id="volleyballModal">
-    <div class="modal-dialog  modal-xl modal-dialog-scrollable">
-      <div class="modal-content">
 
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h1 class="modal-title mx-auto">volleyball</h1>
-          <button type="button" class="close" data-dismiss="modal">×</button>
-        </div>
+    <div class="modal fade" id="volleyballModal">
+      <div class="modal-dialog  modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
 
-        <!-- Modal body -->
-        <div class="modal-body">
-          <div class="container">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h1 class="modal-title mx-auto">volleyball</h1>
+            <button type="button" class="close" data-dismiss="modal">×</button>
+          </div>
 
-            <p>Some QnA on volleyball</p>
-            <div id="volleyballAccordion">
-              <div class="card">
-                <div class="card-header">
-                  <a class="card-link" data-toggle="collapse" href="#volleyballQ1">
-                    Question1
-                  </a>
-                </div>
-                <div id="volleyballQ1" class="collapse show" data-parent="#volleyballAccordion">
-                  <div class="card-body">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="container">
+
+              <p>Some QnA on volleyball</p>
+              <div id="volleyballAccordion">
+                <div class="card">
+                  <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#volleyballQ1">
+                      Question1
+                    </a>
+                  </div>
+                  <div id="volleyballQ1" class="collapse show" data-parent="#volleyballAccordion">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                      labore
+                      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                      aliquip ex ea commodo consequat.
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="card">
-                <div class="card-header">
-                  <a class="collapsed card-link" data-toggle="collapse" href="#volleyballQ2">
-                    Question2
-                  </a>
-                </div>
-                <div id="volleyballQ2" class="collapse" data-parent="#volleyballAccordion">
-                  <div class="card-body">
-                    Fictum, deserunt mollit anim laborum astutumque! Quisque placerat facilisis egestas cillum dolore.
-                    Nec dubitamus multa iter quae et nos invenerat. Contra legem facit qui id facit quod lex prohibet.
-                    Quam diu etiam furor iste tuus nos eludet?
-                    Petierunt uti sibi concilium totius Galliae in diem certam indicere. Morbi fringilla convallis
-                    sapien, id pulvinar odio volutpat. A communi observantia non est recedendum.
-                    Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
-                    habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
-                    Praeterea iter est quasdam res quas ex communi.
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#volleyballQ2">
+                      Question2
+                    </a>
+                  </div>
+                  <div id="volleyballQ2" class="collapse" data-parent="#volleyballAccordion">
+                    <div class="card-body">
+                      Fictum, deserunt mollit anim laborum astutumque! Quisque placerat facilisis egestas cillum dolore.
+                      Nec dubitamus multa iter quae et nos invenerat. Contra legem facit qui id facit quod lex prohibet.
+                      Quam diu etiam furor iste tuus nos eludet?
+                      Petierunt uti sibi concilium totius Galliae in diem certam indicere. Morbi fringilla convallis
+                      sapien, id pulvinar odio volutpat. A communi observantia non est recedendum.
+                      Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
+                      habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
+                      Praeterea iter est quasdam res quas ex communi.
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="card">
-                <div class="card-header">
-                  <a class="collapsed card-link" data-toggle="collapse" href="#volleyballQ3">
-                    Question3
-                  </a>
-                </div>
-                <div id="volleyballQ3" class="collapse" data-parent="#volleyballAccordion">
-                  <div class="card-body">
-                    Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
-                    habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
-                    Praeterea iter est quasdam res quas ex communi.
-                    A communi observantia non est recedendum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus.
-                    Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae.
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#volleyballQ3">
+                      Question3
+                    </a>
+                  </div>
+                  <div id="volleyballQ3" class="collapse" data-parent="#volleyballAccordion">
+                    <div class="card-body">
+                      Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
+                      habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
+                      Praeterea iter est quasdam res quas ex communi.
+                      A communi observantia non est recedendum. Vivamus sagittis lacus vel augue laoreet rutrum
+                      faucibus.
+                      Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae.
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="container" id="weightlifting">
-  <h1 class="text-center">weightlifting</h1>
+  <div class="container" id="weightlifting">
+    <h1 class="text-center mt-5 mb-1 text-capitalize">weightlifting</h1>
 
-  
-    <div class="card" style="width: 20vw;">
-      <img class="card-img-top" src="weightlifting.png" alt="Card image" style="width:15vw">
-      <div class="card-body">
-        <h4 class="card-title">John Doe</h4>
-        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-        <a data-toggle="modal" data-target="#weightliftingModal" class="btn btn-primary stretched-link">See Profile</a>
+    <div class="card-deck">
+      <div class="card">
+        <img class="card-img-top" src="weightlifting.png" alt="Card image" style="width:15vw">
+        <div class="card-body">
+          <h4 class="card-title">John Doe</h4>
+          <p data-toggle="modal" data-target="#weightliftingModal" class="card-text stretched-link">Some example text
+            some example text. John Doe is an architect and engineer</p>
+        </div>
       </div>
     </div>
 
-  
-  <div class="modal fade" id="weightliftingModal">
-    <div class="modal-dialog  modal-xl modal-dialog-scrollable">
-      <div class="modal-content">
 
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h1 class="modal-title mx-auto">weightlifting</h1>
-          <button type="button" class="close" data-dismiss="modal">×</button>
-        </div>
+    <div class="modal fade" id="weightliftingModal">
+      <div class="modal-dialog  modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
 
-        <!-- Modal body -->
-        <div class="modal-body">
-          <div class="container">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h1 class="modal-title mx-auto">weightlifting</h1>
+            <button type="button" class="close" data-dismiss="modal">×</button>
+          </div>
 
-            <p>Some QnA on weightlifting</p>
-            <div id="weightliftingAccordion">
-              <div class="card">
-                <div class="card-header">
-                  <a class="card-link" data-toggle="collapse" href="#weightliftingQ1">
-                    Question1
-                  </a>
-                </div>
-                <div id="weightliftingQ1" class="collapse show" data-parent="#weightliftingAccordion">
-                  <div class="card-body">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="container">
+
+              <p>Some QnA on weightlifting</p>
+              <div id="weightliftingAccordion">
+                <div class="card">
+                  <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#weightliftingQ1">
+                      Question1
+                    </a>
+                  </div>
+                  <div id="weightliftingQ1" class="collapse show" data-parent="#weightliftingAccordion">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                      labore
+                      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                      aliquip ex ea commodo consequat.
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="card">
-                <div class="card-header">
-                  <a class="collapsed card-link" data-toggle="collapse" href="#weightliftingQ2">
-                    Question2
-                  </a>
-                </div>
-                <div id="weightliftingQ2" class="collapse" data-parent="#weightliftingAccordion">
-                  <div class="card-body">
-                    Fictum, deserunt mollit anim laborum astutumque! Quisque placerat facilisis egestas cillum dolore.
-                    Nec dubitamus multa iter quae et nos invenerat. Contra legem facit qui id facit quod lex prohibet.
-                    Quam diu etiam furor iste tuus nos eludet?
-                    Petierunt uti sibi concilium totius Galliae in diem certam indicere. Morbi fringilla convallis
-                    sapien, id pulvinar odio volutpat. A communi observantia non est recedendum.
-                    Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
-                    habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
-                    Praeterea iter est quasdam res quas ex communi.
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#weightliftingQ2">
+                      Question2
+                    </a>
+                  </div>
+                  <div id="weightliftingQ2" class="collapse" data-parent="#weightliftingAccordion">
+                    <div class="card-body">
+                      Fictum, deserunt mollit anim laborum astutumque! Quisque placerat facilisis egestas cillum dolore.
+                      Nec dubitamus multa iter quae et nos invenerat. Contra legem facit qui id facit quod lex prohibet.
+                      Quam diu etiam furor iste tuus nos eludet?
+                      Petierunt uti sibi concilium totius Galliae in diem certam indicere. Morbi fringilla convallis
+                      sapien, id pulvinar odio volutpat. A communi observantia non est recedendum.
+                      Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
+                      habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
+                      Praeterea iter est quasdam res quas ex communi.
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="card">
-                <div class="card-header">
-                  <a class="collapsed card-link" data-toggle="collapse" href="#weightliftingQ3">
-                    Question3
-                  </a>
-                </div>
-                <div id="weightliftingQ3" class="collapse" data-parent="#weightliftingAccordion">
-                  <div class="card-body">
-                    Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
-                    habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
-                    Praeterea iter est quasdam res quas ex communi.
-                    A communi observantia non est recedendum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus.
-                    Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae.
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#weightliftingQ3">
+                      Question3
+                    </a>
+                  </div>
+                  <div id="weightliftingQ3" class="collapse" data-parent="#weightliftingAccordion">
+                    <div class="card-body">
+                      Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese
+                      habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
+                      Praeterea iter est quasdam res quas ex communi.
+                      A communi observantia non est recedendum. Vivamus sagittis lacus vel augue laoreet rutrum
+                      faucibus.
+                      Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae.
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
+        </div>
       </div>
     </div>
   </div>
-</div>
+  <script>
+    $(document).ready(function () {
 
+      $(document).scroll(function () {
+        if ($(window).scrollTop() > 700) {
+          document.getElementById("scrollBtn").style.display = "block";
+
+
+        } else {
+          document.getElementById("scrollBtn").style.display = "none";
+
+        }
+
+
+      });
+
+      $("#scrollBtn").click(function () {
+        $('html, body').animate({
+          scrollTop: 0
+        }, 1200);
+      });
+    })
+  </script>
 </body>
 
 </html>
